@@ -8,7 +8,7 @@
         body {
             font: normal 15pt arial
         }
-        p.par {
+        p {
             display: inline-block;
         }
     </style>
@@ -27,7 +27,7 @@
         var vel = Number(txtv.value)
             res.innerHTML = `<p>sua velocidade atual é <strong>${vel}</strong> Km/h</p>`
             if (vel > 60) {
-                res.innerHtml += `<p> Você esta <strong>MULTADO</strong> por execesso de velocidade!</p>`
+                res.innerHTML += `<p> Você esta <strong>MULTADO</strong> por execesso de velocidade!</p>`
             }
             res.innerHTML += '<p>Dirija sempre com cinto de segurança</p>'
         }

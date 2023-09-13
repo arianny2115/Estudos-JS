@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio do país</title>
+    <style>
+        body {
+            font: normal 18pt arial;
+        }
+        input#button {
+            border: 0;
+            border-radius: 100px;
+            background-color: blueviolet;
+            color: white;
+            padding: 7px;
+        }
+        input#pais {
+            padding: 5px;
+            border-radius: 20px;
+            background-color: rgb(242, 242, 242);
+        }
+        input#pais:hover {
+            background: white;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Você é brasileiro?</h1>
+    <p>De onde você é? </p>
+    <input type="text" name="pais" id="pais">
+    <input type="button" value="Enviar" id="button" onclick="descobrir()">
+    <div id="res"></div>
+    <script>
+        
+        function descobrir() {
+        var cpais = window.document.getElementById('pais')
+        var pais = cpais.value
+        var res = document.querySelector('div#res')
+        if (pais == 'Brasil') {
+            res.innerHTML = '<p>Você é brasileiro</p>'
+        } else {
+            res.innerHTML = '<p>Você é estrangeiro</p>'
+        }
+        }
+    </script>
+</body>
+</html>

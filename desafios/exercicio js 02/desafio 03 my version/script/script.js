@@ -6,9 +6,7 @@ function contar(){
     inicio = Number(tinicio.value)
     passo = Number(tpasso.value)
     fim = Number(tfim.value)
-    for (var inicio;  inicio <= fim; inicio + passo) {
-        res.innerHTML = `${inicio}`
-    }
-
-    // res.innerHTML = `Vamos começar com ${inicio} passando por ${passo} e no fim ${fim}`
+    for (; inicio <= fim; inicio = inicio + passo) {
+    res.innerHTML = `Contando: <p>${inicio} </p>`
+}
 }
